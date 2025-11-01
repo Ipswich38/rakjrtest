@@ -19,6 +19,7 @@
         'input-otp@1.4.2': 'input-otp',
         'figma:asset/928f2e0c1ab2d79f04b72aa621bf5c9d7ab0d1bb.png': path.resolve(__dirname, './src/assets/928f2e0c1ab2d79f04b72aa621bf5c9d7ab0d1bb.png'),
         'figma:asset/480559e9672c0fc7f2443e634bff435c5bbd039a.png': path.resolve(__dirname, './src/assets/480559e9672c0fc7f2443e634bff435c5bbd039a.png'),
+        'figma:asset/30c8e5d3922e814e73d86fe99db7e4215ed0082d.png': path.resolve(__dirname, './src/assets/30c8e5d3922e814e73d86fe99db7e4215ed0082d.png'),
         'embla-carousel-react@8.6.0': 'embla-carousel-react',
         'cmdk@1.1.1': 'cmdk',
         'class-variance-authority@0.7.1': 'class-variance-authority',

@@ -1,0 +1,115 @@
+export interface ProjectTableRow {
+  id: number;
+  projectName: string;
+  contractor: string;
+  location: string;
+  testingProcedure: string;
+}
+
+export const PROJECT_TABLE_DATA: ProjectTableRow[] = [
+  {
+    id: 1,
+    projectName: 'Amansci 3 Land Development',
+    contractor: 'RED OAK PROPERTIES, INC.',
+    location: 'Marulas, Bulacan',
+    testingProcedure: 'Soil Boring Test (SPT 2 Bore Hole 18 Meters Depth)'
+  },
+  {
+    id: 2,
+    projectName: 'Proposed Construction Of Farm',
+    contractor: 'ARCIL LAW',
+    location: 'Sta. Ana Road San Sto. Niño Bancal, Muerim Bamban, Pampanga',
+    testingProcedure: 'Soil Boring (12 Meters Depth)'
+  },
+  {
+    id: 3,
+    projectName: 'Proposed Construction Of By-Pass Bridge',
+    contractor: 'I AND E CONSTRUCTION',
+    location: 'Brgy. San Rafael Floridablanca, Pampanga',
+    testingProcedure: 'Soil Boring (20 Meters Depth) 1 Strata Soil (10 Meters Deep)'
+  },
+  {
+    id: 4,
+    projectName: 'Floor Extension Assessment',
+    contractor: 'MR. GERRY OLAGESCO IMS GLOBAL',
+    location: 'Las Piñas City',
+    testingProcedure: 'Rebound Hammer Test'
+  },
+  {
+    id: 5,
+    projectName: 'Various Sun Cellsites Towers',
+    contractor: 'TECHNOLOGIES, INC.',
+    location: 'Various Locations In Rizal',
+    testingProcedure: 'Soil Boring (15 Meters Depth)'
+  },
+  {
+    id: 6,
+    projectName: 'Various Pipe Laying Projects',
+    contractor: 'LUTRAINS KONSTRUKT, INC.',
+    location: 'Various Locations In North Caloocan',
+    testingProcedure: 'Field Density Test And Moisture Density Relation Of Soil'
+  },
+  {
+    id: 7,
+    projectName: 'KLINE',
+    contractor: 'FABSI PHILIPPINES CONSTRUCTION CORP. & BUILDERS CORPORATION',
+    location: 'Pasay City Brgy. Sta. Ising Camarin, North',
+    testingProcedure: 'Concrete Coring For Compression (3 Samples), Soil Density Test And Moisture Density Relation Of Soil'
+  },
+  {
+    id: 8,
+    projectName: 'Various Pipe Laying Projects',
+    contractor: 'VARIOUS CONTRACTORS',
+    location: 'Caloocan',
+    testingProcedure: 'Field Density Test And Moisture Density Relation Of Soil'
+  },
+  {
+    id: 9,
+    projectName: 'Various Pipe Laying Projects',
+    contractor: 'MEMAG INC. / CICLGEN CONSTRUCTION AND BUILDING MAINTENANCE, INC.',
+    location: 'Quezon City',
+    testingProcedure: 'Field Density Test And Moisture Density Relation Of Soil'
+  },
+  {
+    id: 10,
+    projectName: 'Proposed Ajinomoto Warehouse',
+    contractor: 'VARIOUS CONTRACTORS',
+    location: 'Brgy. Tabang, Guiguinto, Bulacan',
+    testingProcedure: 'Soil Boring Test (8 Bore Holes) (20 Meters Depth)'
+  },
+  {
+    id: 11,
+    projectName: 'DPWH Various Multi-purpose Building',
+    contractor: 'DEPARTMENT OF PUBLIC WORKS AND HIGHWAYS',
+    location: 'Various Locations In Bulacan',
+    testingProcedure: 'Soil Boring Test (20 Meters Depth)'
+  },
+  {
+    id: 12,
+    projectName: 'SMC Litrato Elevated Parking',
+    contractor: 'TECHNOLOGIES, INC. / SHAND HYDRAULIC ENGINEERING CONSTRUCTION BUREAU (SHANGHAI HYDRAULIC COMPANY)',
+    location: 'Mandaluyong City',
+    testingProcedure: 'Soil Boring Test (2 Bore Holes) (Strata)'
+  },
+  {
+    id: 13,
+    projectName: 'Shand Hydraulic Engineering Construction Bureau Co. Ltd. Campsite',
+    contractor: 'SHAND HYDRAULIC ENGINEERING CONSTRUCTION BUREAU',
+    location: 'Sitio Complex Barangay Sto. Cristo Del Monte San Jose Del Monte, Bulacan',
+    testingProcedure: 'Soil Boring Test (8 Bore Holes) (18 Meters Depth)'
+  },
+  {
+    id: 14,
+    projectName: 'Planfiel Water Supply Project',
+    contractor: 'M.E. SICAT CONSTRUCTION, INC.',
+    location: 'Brgy. Rueda, Planfiel, Bulacan',
+    testingProcedure: 'Soil Boring Test (3 Bore Holes) (30 Meters Depth)'
+  },
+  {
+    id: 15,
+    projectName: 'Proposed Circulo Verde Bridge I COMN to Oceanic Ckt.',
+    contractor: 'HW STEEL TECHNOLOGIES, INC.',
+    location: 'Brgy. Mangahan, Pasig And Circumban, Quezon City',
+    testingProcedure: 'Soil Boring Test (2 Bore Holes) (35 Meters Depth)'
+  }
+];

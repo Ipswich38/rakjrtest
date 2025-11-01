@@ -6,6 +6,7 @@ import logo from 'figma:asset/928f2e0c1ab2d79f04b72aa621bf5c9d7ab0d1bb.png';
 const navItems = [
   { name: 'Assessment', id: 'soil-assessment' },
   { name: 'Services', id: 'services' },
+  { name: 'Projects', id: 'projects' },
   { name: 'Process', id: 'process' },
   { name: 'About', id: 'about' },
   { name: 'Contact', id: 'contact' }
@@ -44,31 +45,35 @@ export function Header() {
             onClick={() => scrollToSection('hero')}
             className="flex items-center gap-3 group"
           >
-            <img src={logo} alt="RAK-JR Logo" className="h-10 w-auto" />
+            <img src={logo} alt="RAK-JR Logo" className="h-14 w-auto" />
             <div className={`transition-colors ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
-              <span className="text-lg tracking-tight">RAK-JR</span>
+              <span className="text-xl tracking-tight">RAK-JR</span>
             </div>
           </button>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
-            {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className={`text-sm tracking-wide transition-colors ${
-                  isScrolled 
-                    ? 'text-gray-700 hover:text-[#028118]' 
-                    : 'text-white/90 hover:text-white'
-                }`}
-              >
-                {item.name}
-              </button>
+          <nav className="hidden md:flex items-center gap-6">
+            {navItems.map((item, index) => (
+              <div key={item.id} className="flex items-center gap-6">
+                <button
+                  onClick={() => scrollToSection(item.id)}
+                  className={`text-sm tracking-wide transition-colors ${
+                    isScrolled 
+                      ? 'text-gray-700 hover:text-[#028118]' 
+                      : 'text-white/90 hover:text-white'
+                  }`}
+                >
+                  {item.name}
+                </button>
+                {index < navItems.length - 1 && (
+                  <div className={`w-px h-4 ${isScrolled ? 'bg-gray-300' : 'bg-white/30'}`} />
+                )}
+              </div>
             ))}
             <Button
               onClick={() => scrollToSection('contact')}
               size="sm"
-              className={`rounded-full ${
+              className={`rounded-full ml-2 ${
                 isScrolled
                   ? 'bg-[#10c202] hover:bg-[#028118] text-white'
                   : 'bg-white text-[#028118] hover:bg-gray-100'

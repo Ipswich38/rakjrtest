@@ -2,6 +2,7 @@ import { Header } from './components/Header';
 import { HeroGrid } from './components/HeroGrid';
 import { SoilRiskAssessment } from './components/SoilRiskAssessment';
 import { ServicesGrid } from './components/ServicesGrid';
+import { Projects } from './components/Projects';
 import { ProcessGrid } from './components/ProcessGrid';
 import { AboutGrid } from './components/AboutGrid';
 import { ContactGrid } from './components/ContactGrid';
@@ -17,6 +18,7 @@ export default function App() {
         <HeroGrid />
         <SoilRiskAssessment />
         <ServicesGrid />
+        <Projects />
         <ProcessGrid />
         <AboutGrid />
         <ContactGrid />
