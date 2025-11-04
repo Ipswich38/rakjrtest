@@ -40,14 +40,11 @@ export function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <button 
+          <button
             onClick={() => scrollToSection('hero')}
-            className="flex items-center gap-3 group"
+            className="flex items-center group"
           >
-            <img src="/rjlogonew.png" alt="RAK-JR Logo" className="h-14 w-auto" />
-            <div className={`transition-colors ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
-              <span className="text-xl tracking-tight">RAK-JR</span>
-            </div>
+            <img src="/rjlogonew.png" alt="RAK-JR Logo" className="h-20 w-auto" />
           </button>
 
           {/* Desktop Navigation */}

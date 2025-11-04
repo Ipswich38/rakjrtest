@@ -35,11 +35,10 @@ export function HeroGrid() {
                 Free Risk Assessment
                 <ArrowRight size={18} className="ml-2" />
               </Button>
-              <Button 
+               <Button
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                 size="lg"
-                variant="outline"
-                className="border-2 border-white/80 hover:border-white text-white hover:bg-white/10 rounded-full h-12 px-8 backdrop-blur-sm"
+                className="bg-[#10c202] hover:bg-[#028118] text-white rounded-full h-12 px-8"
               >
                 Request Quote
               </Button>
