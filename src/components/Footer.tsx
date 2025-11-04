@@ -21,11 +21,11 @@ export function Footer() {
             </p>
             <div className="flex gap-6 text-sm text-gray-700">
               <div>
-                <div className="text-2xl text-[#028118] mb-1 tracking-tight">21+</div>
+                <div className="text-2xl text-[#028118] mb-1 tracking-tight">6+</div>
                 <div className="text-xs text-gray-600">Years</div>
               </div>
               <div>
-                <div className="text-2xl text-[#028118] mb-1 tracking-tight">300+</div>
+                <div className="text-2xl text-[#028118] mb-1 tracking-tight">15+</div>
                 <div className="text-xs text-gray-600">Projects</div>
               </div>
               <div>
@@ -81,7 +81,7 @@ export function Footer() {
               <li className="flex items-start gap-2">
                 <MapPin size={16} className="text-[#028118] flex-shrink-0 mt-0.5" />
                 <span className="text-sm text-gray-700">
-                  Caloocan City, Metro Manila
+                  B6, L24-E, Mt. Everest St., Mountain Heights Subdivision, Barangay 183, Tala, Caloocan City 1400, Metro Manila
                 </span>
               </li>
               <li className="flex items-start gap-2">

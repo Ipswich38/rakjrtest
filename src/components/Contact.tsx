@@ -113,7 +113,7 @@ export function Contact() {
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
                     <span className="text-[#fdc123]">✓</span>
-                    <span>Licensed professional engineers with 21+ years combined experience</span>
+                    <span>Licensed professional engineers with 21+ years experience (founder)</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-[#fdc123]">✓</span>
@@ -125,7 +125,7 @@ export function Contact() {
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-[#fdc123]">✓</span>
-                    <span>300+ successful projects with 85% client retention</span>
+                    <span>15+ successful projects with high client retention</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-[#fdc123]">✓</span>

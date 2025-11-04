@@ -47,11 +47,11 @@ export function HeroGrid() {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-8 max-w-2xl">
               <div className="border-l-2 border-[#10c202] pl-4">
-                <div className="text-4xl text-white mb-1 tracking-tight">21+</div>
-                <div className="text-xs text-white/70 uppercase tracking-wider">Years Experience</div>
+                <div className="text-4xl text-white mb-1 tracking-tight">6+</div>
+                <div className="text-xs text-white/70 uppercase tracking-wider">Years Since 2019</div>
               </div>
               <div className="border-l-2 border-[#10c202] pl-4">
-                <div className="text-4xl text-white mb-1 tracking-tight">300+</div>
+                <div className="text-4xl text-white mb-1 tracking-tight">15+</div>
                 <div className="text-xs text-white/70 uppercase tracking-wider">Projects</div>
               </div>
               <div className="border-l-2 border-[#10c202] pl-4">

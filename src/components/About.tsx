@@ -2,24 +2,14 @@ import { Target, Eye, Award, Users, TrendingUp, Shield } from 'lucide-react';
 
 const values = [
   {
-    icon: Award,
-    title: 'Excellence',
-    description: 'We pursue the highest standards in every test, every report, and every client interaction'
-  },
-  {
     icon: Shield,
-    title: 'Integrity',
+    title: 'Reliable',
+    description: 'Our clients depend on us for accurate data and timely delivery – we never compromise on reliability'
+  },
+  {
+    icon: Award,
+    title: 'Trustworthy',
     description: 'We operate with transparency, honesty, and unwavering commitment to ethical practices'
-  },
-  {
-    icon: TrendingUp,
-    title: 'Reliability',
-    description: 'Our clients depend on us for accurate data and timely delivery – we never compromise'
-  },
-  {
-    icon: Target,
-    title: 'Innovation',
-    description: 'We continuously invest in advanced equipment, methodologies, and professional development'
   },
   {
     icon: Users,
@@ -28,8 +18,8 @@ const values = [
   },
   {
     icon: Eye,
-    title: 'Sustainability',
-    description: 'Committed to environmentally responsible practices and long-term professional stewardship'
+    title: 'Service Matters',
+    description: 'We are committed to sustainable practices and responsible stewardship in all our services'
   }
 ];
 
@@ -92,7 +82,7 @@ export function About() {
             </div>
             <h3 className="text-3xl mb-4">Our Mission</h3>
             <p className="text-white/90 leading-relaxed">
-              To be the leading technical testing laboratory in the Philippines by consistently delivering high-quality, accurate, and efficient testing services with exceptional turnaround times. We empower our clients with reliable data for confident decision-making.
+              To offer services to end users and be the leading technical testing laboratory in the Philippines by offering high quality, efficient and accurate testing with fast and reliable turnaround times.
             </p>
           </div>
 
@@ -102,7 +92,7 @@ export function About() {
             </div>
             <h3 className="text-3xl mb-4">Our Vision</h3>
             <p className="text-white/90 leading-relaxed">
-              To be recognized as the most competitive and trusted geotechnical service provider in the Philippines, setting the industry standard for technical excellence, innovation, and client satisfaction.
+              To be the most competitive and most reliable service provider to end users.
             </p>
           </div>
         </div>
@@ -114,7 +104,7 @@ export function About() {
             <p className="text-xl text-gray-600">The principles that guide everything we do</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => {
               const Icon = value.icon;
               return (
