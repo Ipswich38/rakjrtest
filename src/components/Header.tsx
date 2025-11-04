@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from './ui/button';
-import logo from 'figma:asset/928f2e0c1ab2d79f04b72aa621bf5c9d7ab0d1bb.png';
 
 const navItems = [
   { name: 'Assessment', id: 'soil-assessment' },
@@ -45,7 +44,7 @@ export function Header() {
             onClick={() => scrollToSection('hero')}
             className="flex items-center gap-3 group"
           >
-            <img src={logo} alt="RAK-JR Logo" className="h-14 w-auto" />
+            <img src="/rjlogonew.png" alt="RAK-JR Logo" className="h-14 w-auto" />
             <div className={`transition-colors ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
               <span className="text-xl tracking-tight">RAK-JR</span>
             </div>

@@ -1,6 +1,5 @@
 import { ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
-import logo from 'figma:asset/928f2e0c1ab2d79f04b72aa621bf5c9d7ab0d1bb.png';
 
 export function HeroGrid() {
   return (

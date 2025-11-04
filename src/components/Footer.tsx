@@ -1,5 +1,4 @@
 import { MapPin, Phone, Mail } from 'lucide-react';
-import logo from 'figma:asset/928f2e0c1ab2d79f04b72aa621bf5c9d7ab0d1bb.png';
 
 export function Footer() {
   const scrollToSection = (id: string) => {
@@ -15,7 +14,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Company */}
           <div className="md:col-span-2">
-            <img src={logo} alt="RAK-JR Logo" className="h-12 w-auto mb-6" />
+            <img src="/rjlogonew.png" alt="RAK-JR Logo" className="h-12 w-auto mb-6" />
             <h3 className="text-lg mb-4 tracking-tight">RAK-JR. Technical Testing Services</h3>
             <p className="text-sm text-gray-700 leading-relaxed max-w-md mb-6">
               Professional geotechnical testing services since 2019. Building on a foundation of trust and technical excellence.
