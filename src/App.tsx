@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';
 import { HeroGrid } from './components/HeroGrid';
 import { SoilRiskAssessment } from './components/SoilRiskAssessment';
@@ -8,11 +9,13 @@ import { AboutGrid } from './components/AboutGrid';
 import { ContactGrid } from './components/ContactGrid';
 import { Footer } from './components/Footer';
 import { Toaster } from './components/ui/sonner';
+import { AdminProvider } from './contexts/AdminContext';
+import { AdminPanel } from './components/admin/AdminPanel';
+import Library from './components/Library';
 
-export default function App() {
+function HomePage() {
   return (
     <div className="min-h-screen bg-[#f3f4ea]">
-      <Toaster />
       <Header />
       <main>
         <HeroGrid />
@@ -25,5 +28,22 @@ export default function App() {
       </main>
       <Footer />
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <AdminProvider>
+      <Router>
+        <div className="min-h-screen">
+          <Toaster />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/admindashboard" element={<AdminPanel />} />
+            <Route path="/library" element={<Library />} />
+          </Routes>
+        </div>
+      </Router>
+    </AdminProvider>
   );
 }
