@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { Button } from './ui/button';
 import { Card, CardContent } from './ui/card';
 import { Badge } from './ui/badge';
-import { Download, FileText, MapPin, Building2, FlaskConical, Hammer, Search, FileCheck, BarChart3 } from 'lucide-react';
+import { Download, FileText, MapPin, Building2, FlaskConical, Hammer, Search, FileCheck, BarChart3, Building } from 'lucide-react';
 import { PROJECT_LIBRARY_DATA } from '../data/projectLibraryData';
 
 interface WhitepaperProps {

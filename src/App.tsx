@@ -12,7 +12,7 @@ import { Toaster } from './components/ui/sonner';
 import { AdminProvider } from './contexts/AdminContext';
 import { AdminPanel } from './components/admin/AdminPanel';
 import Library from './components/Library';
-import Whitepaper from './components/Whitepaper';
+import { Whitepaper } from './components/Whitepaper';
 
 function HomePage() {
   return (
