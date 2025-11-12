@@ -1,4 +1,5 @@
 import { MapPin, Phone, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export function Footer() {
   const scrollToSection = (id: string) => {
@@ -70,6 +71,14 @@ export function Footer() {
                 >
                   Contact
                 </button>
+              </li>
+              <li>
+                <Link
+                  to="/library"
+                  className="text-sm text-gray-700 hover:text-[#028118] transition-colors"
+                >
+                  Projects Library
+                </Link>
               </li>
             </ul>
           </div>
