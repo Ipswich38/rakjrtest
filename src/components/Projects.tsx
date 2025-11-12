@@ -3,8 +3,6 @@ import { MapPin, Calendar, Building2, ChevronRight, Grid3x3, ArrowUpRight, Facto
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from './ui/dialog';
-import { ProjectsTable } from './ProjectsTable';
-import { PortfolioEvidence } from './PortfolioEvidence';
 import { PROJECT_LIBRARY_DATA } from '../data/projectLibraryData';
 
 interface Project {
@@ -374,11 +372,6 @@ export function Projects() {
         </div>
       </div>
 
-      {/* Complete Projects Table */}
-      <ProjectsTable />
-
-      {/* Portfolio Evidence Section */}
-      <PortfolioEvidence />
 
       {/* Project Details Modal */}
       <Dialog open={!!selectedProject} onOpenChange={() => setSelectedProject(null)}>
