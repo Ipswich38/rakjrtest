@@ -67,12 +67,20 @@ export function Header() {
                 )}
               </div>
             ))}
+            <div className={`w-px h-4 ${isScrolled ? 'bg-gray-300' : 'bg-white/30'}`} />
             <Link to="/library" className={`text-sm tracking-wide transition-colors ${
-              isScrolled 
-                ? 'text-gray-700 hover:text-[#028118]' 
+              isScrolled
+                ? 'text-gray-700 hover:text-[#028118]'
                 : 'text-white/90 hover:text-white'
             }`}>
               Library
+            </Link>
+            <Link to="/whitepaper" className={`text-sm tracking-wide transition-colors ${
+              isScrolled
+                ? 'text-gray-700 hover:text-[#028118]'
+                : 'text-white/90 hover:text-white'
+            }`}>
+              Whitepaper
             </Link>
             <Button
               onClick={() => scrollToSection('contact')}
@@ -114,6 +122,9 @@ export function Header() {
             ))}
             <Link to="/library" className="block w-full text-left text-gray-700 hover:text-[#028118] transition-colors py-2">
               Library
+            </Link>
+            <Link to="/whitepaper" className="block w-full text-left text-gray-700 hover:text-[#028118] transition-colors py-2">
+              Whitepaper
             </Link>
             <Button
               onClick={() => scrollToSection('contact')}

@@ -12,6 +12,7 @@ import { Toaster } from './components/ui/sonner';
 import { AdminProvider } from './contexts/AdminContext';
 import { AdminPanel } from './components/admin/AdminPanel';
 import Library from './components/Library';
+import Whitepaper from './components/Whitepaper';
 
 function HomePage() {
   return (
@@ -41,6 +42,7 @@ export default function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/admindashboard" element={<AdminPanel />} />
             <Route path="/library" element={<Library />} />
+            <Route path="/whitepaper" element={<Whitepaper />} />
           </Routes>
         </div>
       </Router>
