@@ -14,7 +14,7 @@ const Library: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (password === "password") {
+    if (password === "272829") {
       setIsAuthenticated(true);
     } else {
       alert("Incorrect password");
