@@ -31,7 +31,7 @@ export function ServicesGrid() {
           {/* Image Block */}
           <div className="relative rounded-3xl overflow-hidden h-[500px] md:h-auto">
             <img
-              src="https://images.unsplash.com/photo-1569579957290-39e0ecd45d9d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2lsJTIwdGVzdGluZyUyMGZpZWxkfGVufDF8fHx8MTc2MTgyMzY0OXww&ixlib=rb-4.1.0&q=80&w=1080"
+              src="/enhanced_psa.png"
               alt="Field investigation"
               className="w-full h-full object-cover"
             />
