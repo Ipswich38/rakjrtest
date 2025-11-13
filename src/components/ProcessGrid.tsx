@@ -91,7 +91,7 @@ export function ProcessGrid() {
           {/* Image */}
           <div className="relative rounded-3xl overflow-hidden h-80">
             <img
-              src="https://images.unsplash.com/photo-1707944745899-104a4b12d945?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsYWJvcmF0b3J5JTIwc2NpZW50aXN0fGVufDF8fHx8MTc2MTc3ODQ4NHww&ixlib=rb-4.1.0&q=80&w=1080"
+              src="/calibration_final.jpeg"
               alt="Laboratory testing"
               className="w-full h-full object-cover"
             />
