@@ -17,12 +17,55 @@ interface Project {
   description: string;
   featured?: boolean;
   topProject?: boolean;
+  image?: string;
 }
 
-// Top 10 selected projects showcasing RAK-JR's capabilities across different industries
+// Top 13 selected projects showcasing RAK-JR's capabilities across different industries
 const FEATURED_PROJECTS: Project[] = [
   {
     id: '1',
+    title: 'Proposed Three(3) Storey Residential Building',
+    client: 'Private Developer',
+    location: 'San Juan City',
+    category: 'Residential',
+    testingType: 'Soil Boring',
+    depth: 30,
+    quantity: 4,
+    description: 'Comprehensive soil investigation for three-story residential building project requiring foundation design recommendations and bearing capacity analysis.',
+    featured: true,
+    topProject: true,
+    image: '/sj_residential_optimized.jpeg'
+  },
+  {
+    id: '2',
+    title: 'Proposed Pipe Laying Project',
+    client: 'Municipal Engineering Department',
+    location: 'Remegio St. corner Oroquieta St., Sta. Cruz, Manila',
+    category: 'Infrastructure',
+    testingType: 'Soil Boring',
+    depth: 15,
+    quantity: 6,
+    description: 'Critical infrastructure project for water distribution system requiring comprehensive soil analysis for underground pipe installation.',
+    featured: true,
+    topProject: true,
+    image: '/stacruz_infrastructure_optimized.jpeg'
+  },
+  {
+    id: '3',
+    title: 'Proposed Three(3) Storey Apartment',
+    client: 'Northridge Heights Developer',
+    location: 'Northridge Heights, City of SJDM, Bulacan',
+    category: 'Residential',
+    testingType: 'Soil Boring',
+    depth: 25,
+    quantity: 5,
+    description: 'Multi-story residential apartment complex requiring detailed geotechnical investigation for foundation design and settlement analysis.',
+    featured: true,
+    topProject: true,
+    image: '/northridge_residential_optimized.jpeg'
+  },
+  {
+    id: '4',
     title: 'Port Area Power Plant & Sheet Pile Development',
     client: 'Tripartite Engineering and Construction',
     location: 'Brgy. Talisay, San Andres, Quezon',
@@ -35,7 +78,7 @@ const FEATURED_PROJECTS: Project[] = [
     topProject: true
   },
   {
-    id: '2',
+    id: '5',
     title: 'Proposed 18 Storey Condominium Building',
     client: 'Bright Homes Realty Corporation',
     location: 'Brgy. Catmon, Sta. Maria, Bulacan',
@@ -48,7 +91,7 @@ const FEATURED_PROJECTS: Project[] = [
     topProject: true
   },
   {
-    id: '3',
+    id: '6',
     title: 'Proposed New Pasig City Hall Building',
     client: 'Pasig City LGU',
     location: 'Pasig City',
@@ -60,7 +103,7 @@ const FEATURED_PROJECTS: Project[] = [
     featured: true
   },
   {
-    id: '4',
+    id: '7',
     title: 'Proposed Circulo Verde Bridge',
     client: 'NW Steel Technologies, Inc.',
     location: 'Pasig and Quezon City',
@@ -72,7 +115,7 @@ const FEATURED_PROJECTS: Project[] = [
     topProject: true
   },
   {
-    id: '5',
+    id: '8',
     title: 'Proposed Nine Floor Medical Building',
     client: 'Urdaneta City Medical Center',
     location: 'Urdaneta City, Pangasinan',
@@ -84,7 +127,7 @@ const FEATURED_PROJECTS: Project[] = [
     topProject: true
   },
   {
-    id: '6',
+    id: '9',
     title: 'Proposed NW Steel Warehouse',
     client: 'NW Steel Technologies, Inc.',
     location: 'Pulilan, Bulacan',
@@ -96,7 +139,7 @@ const FEATURED_PROJECTS: Project[] = [
     topProject: true
   },
   {
-    id: '7',
+    id: '10',
     title: 'Amaresa Land Development Projects',
     client: 'Red Oak Properties, Inc.',
     location: 'Marilao, Bulacan & Mexico, Pampanga',
@@ -108,7 +151,7 @@ const FEATURED_PROJECTS: Project[] = [
     featured: true
   },
   {
-    id: '8',
+    id: '11',
     title: 'Various Sun Cellular Cell Sites',
     client: 'SMS Global Technologies, Inc.',
     location: 'Various Locations in Rizal and NCR',
@@ -120,7 +163,7 @@ const FEATURED_PROJECTS: Project[] = [
     topProject: true
   },
   {
-    id: '9',
+    id: '12',
     title: 'Various DPWH Multi-Purpose Buildings',
     client: 'Department of Public Works & Highways',
     location: 'Various Locations in Region 3',
@@ -132,7 +175,7 @@ const FEATURED_PROJECTS: Project[] = [
     featured: true
   },
   {
-    id: '10',
+    id: '13',
     title: 'Various Maynilad Pipelaying Projects',
     client: 'Multiple Prime Contractors',
     location: 'Various Locations in NCR',
@@ -235,8 +278,17 @@ export function Projects() {
                 onClick={() => setSelectedProject(project)}
                 className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer transform hover:-translate-y-1"
               >
-                {/* Image Placeholder */}
-                <div className="h-48 bg-gradient-to-br from-[#028118] to-[#10c202] relative overflow-hidden">
+                {/* Project Image */}
+                <div className="h-48 relative overflow-hidden">
+                  {project.image ? (
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-gradient-to-br from-[#028118] to-[#10c202]" />
+                  )}
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors" />
                   <div className="absolute top-4 left-4">
                     <span className={`px-3 py-1 rounded-full text-xs text-white ${getCategoryColor(project.category)}`}>
