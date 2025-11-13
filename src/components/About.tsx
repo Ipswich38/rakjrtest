@@ -1,5 +1,4 @@
 import { Target, Eye, Award, Users, TrendingUp, Shield } from 'lucide-react';
-import { DocumentsSection } from './DocumentsSection';
 
 const values = [
   {
@@ -148,9 +147,6 @@ export function About() {
             ))}
           </div>
         </div>
-
-        {/* Documents Section */}
-        <DocumentsSection />
       </div>
     </section>
   );

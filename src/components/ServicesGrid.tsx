@@ -1,7 +1,24 @@
-import { FlaskConical, Hammer, Search, FileCheck, ArrowRight } from 'lucide-react';
+import { FlaskConical, Hammer, Search, FileCheck, ArrowRight, Award, Download, FileText, Maximize2 } from 'lucide-react';
+import { useState } from 'react';
 import { Button } from './ui/button';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from './ui/dialog';
 
 export function ServicesGrid() {
+  const [showCertificateModal, setShowCertificateModal] = useState(false);
+
+  const handleWhitepaperDownload = () => {
+    window.open('/whitepaper', '_blank');
+  };
+
+  const handleCertificateDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/Certificate.jpeg';
+    link.download = 'RAK-JR_Certificate_of_Accreditation.jpeg';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section id="services" className="py-24 bg-[#f3f4ea]">
       <div className="container mx-auto px-4">
@@ -147,26 +164,134 @@ export function ServicesGrid() {
           </div>
         </div>
 
-        {/* Promotional Banner for Soil Assessment */}
-        <div className="mt-6 bg-gradient-to-r from-[#fdc123] to-[#ff8c00] rounded-3xl p-8 text-white">
-          <div className="flex items-center justify-between flex-wrap gap-6">
-            <div className="flex-1">
-              <h3 className="text-2xl mb-2 tracking-tight">🎯 Try Our Free Soil Risk Assessment Tool</h3>
-              <p className="text-white/90 text-sm">
-                Get instant preliminary risk analysis for your project location before scheduling professional testing
-              </p>
+        {/* Three Action Cards */}
+        <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* Soil Risk Assessment Tool */}
+          <div className="bg-gradient-to-r from-[#fdc123] to-[#ff8c00] rounded-3xl p-6 text-white">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
+                <span className="text-2xl">🎯</span>
+              </div>
+              <h3 className="text-xl tracking-tight">Risk Assessment Tool</h3>
             </div>
-            <Button 
+            <p className="text-white/90 text-sm mb-4 leading-relaxed">
+              Get instant preliminary risk analysis for your project location before scheduling professional testing
+            </p>
+            <Button
               onClick={() => document.getElementById('soil-assessment')?.scrollIntoView({ behavior: 'smooth' })}
-              size="lg"
-              className="bg-white text-[#ff8c00] hover:bg-gray-100 rounded-full"
+              className="w-full bg-white text-[#ff8c00] hover:bg-gray-100 rounded-xl"
             >
               Try It Now
-              <ArrowRight size={18} className="ml-2" />
+              <ArrowRight size={16} className="ml-2" />
             </Button>
+          </div>
+
+          {/* Whitepaper */}
+          <div className="bg-gradient-to-r from-[#028118] to-[#10c202] rounded-3xl p-6 text-white">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
+                <FileText size={24} className="text-white" />
+              </div>
+              <h3 className="text-xl tracking-tight">Technical Whitepaper</h3>
+            </div>
+            <p className="text-white/90 text-sm mb-4 leading-relaxed">
+              Comprehensive technical documentation of our geotechnical investigation methodologies and best practices
+            </p>
+            <Button
+              onClick={handleWhitepaperDownload}
+              className="w-full bg-white text-[#028118] hover:bg-gray-100 rounded-xl"
+            >
+              <Download size={16} className="mr-2" />
+              View & Download
+            </Button>
+          </div>
+
+          {/* Certificate */}
+          <div className="bg-gradient-to-r from-[#6366f1] to-[#8b5cf6] rounded-3xl p-6 text-white">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
+                <Award size={24} className="text-white" />
+              </div>
+              <h3 className="text-xl tracking-tight">Accreditation</h3>
+            </div>
+
+            {/* Certificate Preview */}
+            <div
+              className="relative mb-4 cursor-pointer group rounded-lg overflow-hidden"
+              onClick={() => setShowCertificateModal(true)}
+            >
+              <img
+                src="/certificate_optimized.jpeg"
+                alt="RAK-JR Certificate of Accreditation"
+                className="w-full h-24 object-cover"
+              />
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all flex items-center justify-center">
+                <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                  <Maximize2 size={16} className="text-white" />
+                </div>
+              </div>
+            </div>
+
+            <div className="flex gap-2">
+              <Button
+                onClick={() => setShowCertificateModal(true)}
+                variant="outline"
+                className="flex-1 border-white/30 text-white hover:bg-white/10 rounded-xl"
+                size="sm"
+              >
+                <Maximize2 size={14} className="mr-1" />
+                View
+              </Button>
+              <Button
+                onClick={handleCertificateDownload}
+                className="flex-1 bg-white text-[#6366f1] hover:bg-gray-100 rounded-xl"
+                size="sm"
+              >
+                <Download size={14} className="mr-1" />
+                Download
+              </Button>
+            </div>
           </div>
         </div>
       </div>
+
+      {/* Certificate Modal */}
+      <Dialog open={showCertificateModal} onOpenChange={setShowCertificateModal}>
+        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="flex items-center justify-between">
+              <span>Certificate of Accreditation</span>
+              <Button
+                onClick={handleCertificateDownload}
+                size="sm"
+                className="bg-[#10c202] hover:bg-[#028118] text-white"
+              >
+                <Download size={16} className="mr-2" />
+                Download
+              </Button>
+            </DialogTitle>
+          </DialogHeader>
+
+          <div className="space-y-4">
+            <img
+              src="/Certificate.jpeg"
+              alt="RAK-JR Certificate of Accreditation - Full Size"
+              className="w-full h-auto rounded-lg border"
+            />
+
+            <div className="bg-gray-50 rounded-lg p-4">
+              <h4 className="text-lg font-semibold text-gray-900 mb-2">Certificate Details</h4>
+              <div className="text-sm text-gray-600 space-y-1">
+                <p><strong>Organization:</strong> RAK-JR. TECHNICAL TESTING SERVICES</p>
+                <p><strong>Accreditation:</strong> Private Testing Laboratory</p>
+                <p><strong>Location:</strong> Block 6, Lot 24-F, Mt. Everest St., Mountain Heights Subd., Brgy. 183, Caloocan City, Metro Manila</p>
+                <p><strong>Valid Period:</strong> October 4, 2025 to October 3, 2027</p>
+                <p><strong>Issuing Authority:</strong> Department of Public Works and Highways</p>
+              </div>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </section>
   );
 }
