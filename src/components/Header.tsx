@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from './ui/button';
-import { Link } from 'react-router-dom';
 
 const navItems = [
   { name: 'Assessment', id: 'soil-assessment' },
@@ -67,14 +66,6 @@ export function Header() {
                 )}
               </div>
             ))}
-            <div className={`w-px h-4 ${isScrolled ? 'bg-gray-300' : 'bg-white/30'}`} />
-            <Link to="/whitepaper" className={`text-sm tracking-wide transition-colors ${
-              isScrolled
-                ? 'text-gray-700 hover:text-[#028118]'
-                : 'text-white/90 hover:text-white'
-            }`}>
-              Whitepaper
-            </Link>
             <Button
               onClick={() => scrollToSection('contact')}
               size="sm"
@@ -113,9 +104,6 @@ export function Header() {
                 {item.name}
               </button>
             ))}
-            <Link to="/whitepaper" className="block w-full text-left text-gray-700 hover:text-[#028118] transition-colors py-2">
-              Whitepaper
-            </Link>
             <Button
               onClick={() => scrollToSection('contact')}
               size="lg"
