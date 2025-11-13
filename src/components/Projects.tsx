@@ -20,7 +20,7 @@ interface Project {
   image?: string;
 }
 
-// Top 13 selected projects showcasing RAK-JR's capabilities across different industries
+// Featured Projects with images - showcasing recent work with visual documentation
 const FEATURED_PROJECTS: Project[] = [
   {
     id: '1',
@@ -33,7 +33,6 @@ const FEATURED_PROJECTS: Project[] = [
     quantity: 4,
     description: 'Comprehensive soil investigation for three-story residential building project requiring foundation design recommendations and bearing capacity analysis.',
     featured: true,
-    topProject: true,
     image: '/sj_residential_optimized.jpeg'
   },
   {
@@ -47,7 +46,6 @@ const FEATURED_PROJECTS: Project[] = [
     quantity: 6,
     description: 'Critical infrastructure project for water distribution system requiring comprehensive soil analysis for underground pipe installation.',
     featured: true,
-    topProject: true,
     image: '/stacruz_infrastructure_optimized.jpeg'
   },
   {
@@ -61,9 +59,12 @@ const FEATURED_PROJECTS: Project[] = [
     quantity: 5,
     description: 'Multi-story residential apartment complex requiring detailed geotechnical investigation for foundation design and settlement analysis.',
     featured: true,
-    topProject: true,
     image: '/northridge_residential_optimized.jpeg'
-  },
+  }
+];
+
+// Signature Projects - major achievements and notable works
+const SIGNATURE_PROJECTS: Project[] = [
   {
     id: '4',
     title: 'Port Area Power Plant & Sheet Pile Development',
@@ -74,7 +75,6 @@ const FEATURED_PROJECTS: Project[] = [
     depth: 20,
     quantity: 60,
     description: 'Large-scale soil investigation for major power plant infrastructure with extensive onshore and offshore testing requirements.',
-    featured: true,
     topProject: true
   },
   {
@@ -87,7 +87,6 @@ const FEATURED_PROJECTS: Project[] = [
     depth: 30,
     quantity: 6,
     description: 'High-rise residential development requiring comprehensive geotechnical investigation for foundation design.',
-    featured: true,
     topProject: true
   },
   {
@@ -100,7 +99,7 @@ const FEATURED_PROJECTS: Project[] = [
     depth: 42,
     quantity: 2,
     description: 'Government infrastructure project requiring specialized testing for public building construction.',
-    featured: true
+    topProject: true
   },
   {
     id: '7',
@@ -124,66 +123,6 @@ const FEATURED_PROJECTS: Project[] = [
     depth: 30,
     quantity: 9,
     description: 'Healthcare facility development requiring precise soil analysis for medical equipment foundations.',
-    topProject: true
-  },
-  {
-    id: '9',
-    title: 'Proposed NW Steel Warehouse',
-    client: 'NW Steel Technologies, Inc.',
-    location: 'Pulilan, Bulacan',
-    category: 'Industrial',
-    testingType: 'Soil Boring',
-    depth: 30,
-    quantity: 6,
-    description: 'Industrial warehouse facility with heavy load requirements for steel storage and operations.',
-    topProject: true
-  },
-  {
-    id: '10',
-    title: 'Amaresa Land Development Projects',
-    client: 'Red Oak Properties, Inc.',
-    location: 'Marilao, Bulacan & Mexico, Pampanga',
-    category: 'Residential',
-    testingType: 'Soil Boring',
-    depth: 12,
-    quantity: 21,
-    description: 'Multi-site residential subdivision development across two major provinces.',
-    featured: true
-  },
-  {
-    id: '11',
-    title: 'Various Sun Cellular Cell Sites',
-    client: 'SMS Global Technologies, Inc.',
-    location: 'Various Locations in Rizal and NCR',
-    category: 'Infrastructure',
-    testingType: 'Soil Boring',
-    depth: 12,
-    quantity: 12,
-    description: 'Telecommunications infrastructure testing across multiple strategic locations.',
-    topProject: true
-  },
-  {
-    id: '12',
-    title: 'Various DPWH Multi-Purpose Buildings',
-    client: 'Department of Public Works & Highways',
-    location: 'Various Locations in Region 3',
-    category: 'Infrastructure',
-    testingType: 'Soil Boring',
-    depth: 15,
-    quantity: 12,
-    description: 'Government infrastructure projects supporting public services across Central Luzon.',
-    featured: true
-  },
-  {
-    id: '13',
-    title: 'Various Maynilad Pipelaying Projects',
-    client: 'Multiple Prime Contractors',
-    location: 'Various Locations in NCR',
-    category: 'Infrastructure',
-    testingType: 'Field Density Test',
-    depth: null,
-    quantity: null,
-    description: 'Critical water infrastructure testing supporting Metro Manila\'s water distribution system.',
     topProject: true
   }
 ];
@@ -265,14 +204,14 @@ export function Projects() {
         {/* Featured Projects */}
         <div className="mb-20">
           <div className="flex items-center justify-between mb-8">
-            <h3 className="text-2xl md:text-3xl text-gray-900 tracking-tight">Signature Projects</h3>
+            <h3 className="text-2xl md:text-3xl text-gray-900 tracking-tight">Featured Projects</h3>
             <Badge variant="outline" className="text-[#028118] border-[#028118]">
-              {FEATURED_PROJECTS.filter(p => p.featured).length} Showcase Projects
+              {FEATURED_PROJECTS.length} Recent Projects
             </Badge>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {FEATURED_PROJECTS.filter(p => p.featured).map((project) => (
+            {FEATURED_PROJECTS.map((project) => (
               <div
                 key={project.id}
                 onClick={() => setSelectedProject(project)}
@@ -332,17 +271,17 @@ export function Projects() {
           </div>
         </div>
 
-        {/* Top Projects */}
+        {/* Signature Projects */}
         <div className="mb-20">
           <div className="flex items-center justify-between mb-8">
-            <h3 className="text-2xl md:text-3xl text-gray-900 tracking-tight">Major Achievements</h3>
+            <h3 className="text-2xl md:text-3xl text-gray-900 tracking-tight">Signature Projects</h3>
             <Badge variant="outline" className="text-[#fdc123] border-[#fdc123]">
-              {FEATURED_PROJECTS.filter(p => p.topProject).length} Major Projects
+              {SIGNATURE_PROJECTS.length} Major Projects
             </Badge>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
-            {FEATURED_PROJECTS.filter(p => p.topProject).map((project) => (
+            {SIGNATURE_PROJECTS.map((project) => (
               <div
                 key={project.id}
                 onClick={() => setSelectedProject(project)}
