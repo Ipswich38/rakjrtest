@@ -99,7 +99,7 @@ export function ServicesGrid() {
             <ul className="space-y-2 text-xs text-gray-700">
               <li className="flex items-start gap-2">
                 <span className="text-[#10c202] mt-0.5">—</span>
-                <span>Soil Classification</span>
+                <span>Soil Classification - particle size distribution, plastic limit, liquid limit, plasticity index, specific gravity of soil</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-[#10c202] mt-0.5">—</span>
@@ -129,10 +129,6 @@ export function ServicesGrid() {
               <li className="flex items-start gap-2">
                 <span className="text-[#10c202] mt-0.5">—</span>
                 <span>Rebound Hammer</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-[#10c202] mt-0.5">—</span>
-                <span>Ultrasonic Testing</span>
               </li>
             </ul>
           </div>
