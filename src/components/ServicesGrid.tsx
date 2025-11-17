@@ -2,12 +2,14 @@ import { FlaskConical, Hammer, Search, FileCheck, ArrowRight, Award, Download, F
 import { useState } from 'react';
 import { Button } from './ui/button';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from './ui/dialog';
+import { WhitepaperDownloadForm } from './WhitepaperDownloadForm';
 
 export function ServicesGrid() {
   const [showCertificateModal, setShowCertificateModal] = useState(false);
+  const [showWhitepaperForm, setShowWhitepaperForm] = useState(false);
 
   const handleWhitepaperDownload = () => {
-    window.open('/whitepaper', '_blank');
+    setShowWhitepaperForm(true);
   };
 
   const handleCertificateDownload = () => {
@@ -250,6 +252,12 @@ export function ServicesGrid() {
           </div>
         </div>
       </div>
+
+      {/* Whitepaper Download Form */}
+      <WhitepaperDownloadForm
+        isOpen={showWhitepaperForm}
+        onClose={() => setShowWhitepaperForm(false)}
+      />
 
       {/* Certificate Modal */}
       <Dialog open={showCertificateModal} onOpenChange={setShowCertificateModal}>
