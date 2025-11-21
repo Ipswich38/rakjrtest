@@ -37,12 +37,6 @@ const leaders = [
     title: 'Consulting Geotechnical Engineer',
     license: 'PRC License No. 59571',
     description: 'Professional Civil Engineer specializing in geotechnical and substructural engineering with advanced academic credentials.'
-  },
-  {
-    name: 'Bryan Angelo Gammad, M.Sc.E',
-    title: 'Geotechnical Engineering Consultant',
-    license: 'PRC License No. 0136159',
-    description: 'Professional Civil Engineer providing expert analysis for complex geotechnical challenges and foundation design.'
   }
 ];
 
