@@ -205,7 +205,7 @@ export function ServicesGrid() {
           </div>
 
           {/* Certificate */}
-          <div className="bg-gradient-to-r from-[#6366f1] to-[#8b5cf6] rounded-3xl p-6 text-white">
+          <div className="bg-gradient-to-r from-[#028118] to-[#10c202] rounded-3xl p-6 text-white">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
                 <Award size={24} className="text-white" />
@@ -214,14 +214,14 @@ export function ServicesGrid() {
             </div>
 
             {/* Certificate Description */}
-            <p className="text-white/90 text-sm mb-4 leading-relaxed">
+            <p className="text-white text-sm mb-4 leading-relaxed">
               View our official Department of Public Works and Highways certificate of accreditation as a Private Testing Laboratory.
             </p>
 
             <div className="flex gap-2">
               <Button
                 onClick={() => setShowCertificateModal(true)}
-                className="flex-1 bg-white text-[#6366f1] hover:bg-gray-100 rounded-xl"
+                className="flex-1 bg-white text-[#028118] hover:bg-gray-100 rounded-xl"
                 size="sm"
               >
                 <Maximize2 size={14} className="mr-2" />
