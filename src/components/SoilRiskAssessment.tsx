@@ -178,15 +178,15 @@ Thank you.
               <Button
                 onClick={handleAnalyze}
                 disabled={isLoading || !region}
-                size="lg"
-                className="bg-[#10c202] hover:bg-[#028118] text-white rounded-xl h-14 px-8"
+                size="sm"
+                className="bg-[#10c202] hover:bg-[#028118] text-white rounded-xl px-6"
               >
                 {isLoading ? (
                   <Loader2 className="w-5 h-5 animate-spin" />
                 ) : (
                   <>
-                    <Search size={20} className="mr-2" />
-                    View Overview
+                    <Search size={16} className="mr-2" />
+                    View
                   </>
                 )}
               </Button>
