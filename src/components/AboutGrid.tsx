@@ -73,7 +73,7 @@ export function AboutGrid() {
           <h3 className="text-2xl text-gray-900 mb-6 tracking-tight">Leadership Team</h3>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Leader 1 */}
           <div className="bg-white rounded-3xl p-8 hover:shadow-xl transition-all">
             <div className="w-14 h-14 bg-gradient-to-br from-[#028118] to-[#10c202] rounded-full flex items-center justify-center text-white text-xl mb-5">
@@ -105,19 +105,6 @@ export function AboutGrid() {
             </p>
           </div>
 
-          {/* Leader 3 */}
-          <div className="bg-white rounded-3xl p-8 hover:shadow-xl transition-all">
-            <div className="w-14 h-14 bg-gradient-to-br from-[#fdc123] to-[#ff8c00] rounded-full flex items-center justify-center text-white text-xl mb-5">
-              BG
-            </div>
-            <h4 className="text-lg text-gray-900 mb-2 tracking-tight">Bryan Angelo Gammad</h4>
-            <p className="text-[#028118] text-sm mb-3">Geotechnical Engineering Consultant</p>
-            <p className="text-xs text-gray-600 mb-1">M.Sc.E</p>
-            <p className="text-xs text-gray-600 mb-4">PRC License No. 0136159</p>
-            <p className="text-gray-600 text-xs leading-relaxed">
-              Professional Civil Engineer providing expert analysis for complex geotechnical challenges and foundation design.
-            </p>
-          </div>
         </div>
       </div>
     </section>

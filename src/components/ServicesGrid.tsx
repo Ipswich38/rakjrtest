@@ -14,7 +14,7 @@ export function ServicesGrid() {
 
   const handleCertificateDownload = () => {
     const link = document.createElement('a');
-    link.href = '/Certificate.jpeg';
+    link.href = '/certificate_optimized.jpeg';
     link.download = 'RAK-JR_Certificate_of_Accreditation.jpeg';
     document.body.appendChild(link);
     link.click();
@@ -213,36 +213,24 @@ export function ServicesGrid() {
               <h3 className="text-xl tracking-tight">Accreditation</h3>
             </div>
 
-            {/* Certificate Preview */}
-            <div
-              className="relative mb-4 cursor-pointer group rounded-lg overflow-hidden"
-              onClick={() => setShowCertificateModal(true)}
-            >
-              <img
-                src="/certificate_optimized.jpeg"
-                alt="RAK-JR Certificate of Accreditation"
-                className="w-full h-24 object-cover"
-              />
-              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all flex items-center justify-center">
-                <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                  <Maximize2 size={16} className="text-white" />
-                </div>
-              </div>
-            </div>
+            {/* Certificate Description */}
+            <p className="text-white/90 text-sm mb-4 leading-relaxed">
+              View our official Department of Public Works and Highways certificate of accreditation as a Private Testing Laboratory.
+            </p>
 
             <div className="flex gap-2">
               <Button
                 onClick={() => setShowCertificateModal(true)}
-                variant="outline"
-                className="flex-1 border-white/30 text-white hover:bg-white/10 rounded-xl"
+                className="flex-1 bg-white text-[#6366f1] hover:bg-gray-100 rounded-xl"
                 size="sm"
               >
-                <Maximize2 size={14} className="mr-1" />
-                View
+                <Maximize2 size={14} className="mr-2" />
+                View Certificate
               </Button>
               <Button
                 onClick={handleCertificateDownload}
-                className="flex-1 bg-white text-[#6366f1] hover:bg-gray-100 rounded-xl"
+                variant="outline"
+                className="flex-1 border-white/30 text-white hover:bg-white/10 rounded-xl"
                 size="sm"
               >
                 <Download size={14} className="mr-1" />
@@ -278,7 +266,7 @@ export function ServicesGrid() {
 
           <div className="space-y-4">
             <img
-              src="/Certificate.jpeg"
+              src="/certificate_optimized.jpeg"
               alt="RAK-JR Certificate of Accreditation - Full Size"
               className="w-full h-auto rounded-lg border"
             />

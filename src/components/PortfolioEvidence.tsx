@@ -31,14 +31,14 @@ const PORTFOLIO_ITEMS: ReportItem[] = [
     location: 'La Salle Cor Ermin Garcia St., Brgy. Silangan, Cubao, Quezon City',
     client: 'PENDRAGON ANIMAL HEALTH GROUP INC.',
     date: 'March 12, 2022 - March 17, 2022',
-    evaluatedBy: 'Engr. Bryan Angelo Gammad - Geotechnical Engineering Consultant',
+    evaluatedBy: 'Engr. Miguel Dimadura - Consulting Geotechnical Engineer',
     imageUrl: 'https://images.unsplash.com/photo-1754780960162-839cda44d736?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb25zdHJ1Y3Rpb24lMjBibHVlcHJpbnQlMjBkb2N1bWVudHxlbnwxfHx8fDE3NjE5NTcxNTN8MA&ixlib=rb-4.1.0&q=80&w=1080',
     details: [
       { label: 'Project Name', value: 'Prop. Seven (7) Storey Building' },
       { label: 'Location', value: 'La Salle Cor Ermin Garcia St., Brgy. Silangan, Cubao, Quezon City' },
       { label: 'Client', value: 'PENDRAGON ANIMAL HEALTH GROUP INC.' },
       { label: 'Duration', value: 'March 12, 2022 - March 17, 2022' },
-      { label: 'Evaluated By', value: 'Engr. Bryan Angelo Gammad - Geotechnical Engineering Consultant' },
+      { label: 'Evaluated By', value: 'Engr. Miguel Dimadura - Consulting Geotechnical Engineer' },
     ]
   },
   {
@@ -50,14 +50,14 @@ const PORTFOLIO_ITEMS: ReportItem[] = [
     location: 'Blk. 25A Lot 14 Phase 4 Mangahan Ave. Buenamar Subd. QLC',
     client: 'RLA HOMES DTFASCO',
     date: 'August 12, 2022',
-    evaluatedBy: 'Engr. Bryan Gammad - Consulting Geotechnical / Sub Structural Engr.',
+    evaluatedBy: 'Engr. Miguel Dimadura - Consulting Geotechnical Engineer',
     imageUrl: 'https://images.unsplash.com/photo-1568057373106-63057e421d1c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbmdpbmVlcmluZyUyMHJlcG9ydCUyMHBhcGVyc3xlbnwxfHx8fDE3NjE5NTcxNTR8MA&ixlib=rb-4.1.0&q=80&w=1080',
     details: [
       { label: 'Project Name', value: 'Proposed Three (3) Storey Residential Building' },
       { label: 'Location', value: 'Blk. 25A Lot 14 Phase 4 Mangahan Ave. Buenamar Subd. QLC' },
       { label: 'Client', value: 'RLA HOMES DTFASCO' },
       { label: 'Date', value: 'August 12, 2022' },
-      { label: 'Evaluated By', value: 'Engr. Bryan Gammad - Consulting Geotechnical / Sub Structural Engr.' },
+      { label: 'Evaluated By', value: 'Engr. Miguel Dimadura - Consulting Geotechnical Engineer' },
     ]
   },
   {
