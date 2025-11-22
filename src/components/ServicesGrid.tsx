@@ -12,14 +12,6 @@ export function ServicesGrid() {
     setShowWhitepaperForm(true);
   };
 
-  const handleCertificateDownload = () => {
-    const link = document.createElement('a');
-    link.href = '/certificate_optimized.jpeg';
-    link.download = 'RAK-JR_Certificate_of_Accreditation.jpeg';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
 
   return (
     <section id="services" className="py-24 bg-[#f3f4ea]">
@@ -27,9 +19,9 @@ export function ServicesGrid() {
         {/* Asymmetric Grid Layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
           {/* Large Text Block */}
-          <div className="bg-[#028118] rounded-3xl p-12 md:p-16 flex flex-col justify-center text-white">
+          <div className="bg-[#028118] rounded-3xl p-6 md:p-12 lg:p-16 flex flex-col justify-center text-white">
             <div className="text-xs uppercase tracking-widest text-[#10c202] mb-6">Our Services</div>
-            <h2 className="text-4xl md:text-6xl tracking-tighter leading-[0.9] mb-8">
+            <h2 className="text-3xl md:text-4xl lg:text-6xl tracking-tighter leading-[0.9] mb-8">
               Complete<br />Testing<br />Solutions
             </h2>
             <p className="text-white/90 mb-8 leading-relaxed max-w-md">
@@ -48,7 +40,7 @@ export function ServicesGrid() {
           </div>
 
           {/* Image Block */}
-          <div className="relative rounded-3xl overflow-hidden h-[500px] md:h-auto">
+          <div className="relative rounded-3xl overflow-hidden h-64 sm:h-80 md:h-auto">
             <img
               src="/enhanced_psa.png"
               alt="Field investigation"
@@ -218,23 +210,14 @@ export function ServicesGrid() {
               View our official Department of Public Works and Highways certificate of accreditation as a Private Testing Laboratory.
             </p>
 
-            <div className="flex gap-2">
+            <div>
               <Button
                 onClick={() => setShowCertificateModal(true)}
-                className="flex-1 bg-white text-[#028118] hover:bg-gray-100 rounded-xl"
+                className="w-full bg-white text-[#028118] hover:bg-gray-100 rounded-xl"
                 size="sm"
               >
                 <Maximize2 size={14} className="mr-2" />
                 View Certificate
-              </Button>
-              <Button
-                onClick={handleCertificateDownload}
-                variant="outline"
-                className="flex-1 border-white/30 text-white hover:bg-white/10 rounded-xl"
-                size="sm"
-              >
-                <Download size={14} className="mr-1" />
-                Download
               </Button>
             </div>
           </div>
@@ -251,17 +234,7 @@ export function ServicesGrid() {
       <Dialog open={showCertificateModal} onOpenChange={setShowCertificateModal}>
         <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
           <DialogHeader>
-            <DialogTitle className="flex items-center justify-between">
-              <span>Certificate of Accreditation</span>
-              <Button
-                onClick={handleCertificateDownload}
-                size="sm"
-                className="bg-[#10c202] hover:bg-[#028118] text-white"
-              >
-                <Download size={16} className="mr-2" />
-                Download
-              </Button>
-            </DialogTitle>
+            <DialogTitle>Certificate of Accreditation</DialogTitle>
           </DialogHeader>
 
           <div className="space-y-4">

@@ -22,7 +22,7 @@ export function Hero() {
               <span className="text-sm text-white">Trusted by 300+ construction projects since 2019</span>
             </div>
 
-            <h1 className="text-5xl md:text-6xl lg:text-7xl text-white leading-tight">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl text-white leading-tight">
               Your Trusted Partner in
               <span className="block mt-2 bg-gradient-to-r from-[#10c202] to-[#fdc123] bg-clip-text text-transparent">
                 Geotechnical Excellence
@@ -53,17 +53,17 @@ export function Hero() {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-8 pt-8">
+            <div className="grid grid-cols-3 gap-4 md:gap-8 pt-8">
               <div>
-                <div className="text-4xl text-[#10c202] mb-1">21+</div>
+                <div className="text-3xl md:text-4xl text-[#10c202] mb-1">21+</div>
                 <div className="text-sm text-gray-300">Years Combined Experience</div>
               </div>
               <div>
-                <div className="text-4xl text-[#10c202] mb-1">300+</div>
+                <div className="text-3xl md:text-4xl text-[#10c202] mb-1">300+</div>
                 <div className="text-sm text-gray-300">Projects Completed</div>
               </div>
               <div>
-                <div className="text-4xl text-[#10c202] mb-1">85%</div>
+                <div className="text-3xl md:text-4xl text-[#10c202] mb-1">85%</div>
                 <div className="text-sm text-gray-300">Client Retention</div>
               </div>
             </div>

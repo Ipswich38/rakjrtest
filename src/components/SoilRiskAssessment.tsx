@@ -123,7 +123,7 @@ Thank you.
             <Info size={14} />
             <span>Educational Regional Overview</span>
           </div>
-          <h2 className="text-4xl md:text-6xl text-white mb-6 tracking-tighter leading-[0.9]">
+          <h2 className="text-3xl md:text-4xl lg:text-6xl text-white mb-6 tracking-tighter leading-[0.9]">
             Philippine Regions<br />Geological Overview
           </h2>
           <p className="text-white/80 text-lg max-w-2xl mx-auto leading-relaxed mb-4">

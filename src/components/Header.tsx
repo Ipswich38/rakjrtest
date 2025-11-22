@@ -44,7 +44,7 @@ export function Header() {
             onClick={() => scrollToSection('hero')}
             className="flex items-center group"
           >
-            <img src="/rjlogonew.png" alt="RAK-JR Logo" className="h-20 w-auto" />
+            <img src="/rjlogonew.png" alt="RAK-JR Logo" className="h-16 md:h-20 w-auto" />
           </button>
 
           {/* Desktop Navigation */}
