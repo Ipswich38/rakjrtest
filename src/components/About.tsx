@@ -29,7 +29,6 @@ const leaders = [
     title: 'Founder & General Manager',
     education: 'B.S. Mechanical Engineering',
     school: 'Technological University of the Philippines',
-    experience: '21+ years in geotechnical investigation',
     description: 'Extensive experience in major infrastructure, commercial buildings, residential complexes, and government facilities across the Philippines.'
   },
   {

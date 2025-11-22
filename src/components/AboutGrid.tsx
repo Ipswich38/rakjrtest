@@ -83,9 +83,6 @@ export function AboutGrid() {
             <p className="text-[#028118] text-sm mb-3">Founder & General Manager</p>
             <p className="text-xs text-gray-600 mb-1">B.S. Mechanical Engineering</p>
             <p className="text-xs text-gray-600 mb-4">Technological University of the Philippines</p>
-            <p className="text-gray-700 text-xs leading-relaxed mb-3">
-              21+ years in geotechnical investigation
-            </p>
             <p className="text-gray-600 text-xs leading-relaxed">
               Extensive experience in major infrastructure, commercial buildings, and government facilities across the Philippines.
             </p>
