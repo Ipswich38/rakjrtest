@@ -291,19 +291,21 @@ Thank you.
             <div className="bg-gradient-to-br from-[#10c202] to-[#028118] rounded-3xl p-8 text-white">
               <h4 className="text-2xl mb-6 tracking-tight">Typical Investigation Needs</h4>
               <div className="space-y-4">
-                {Object.entries(regionalData.typicalInvestigationNeeds).map(([key, value]) => (
-                  <div key={key} className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
-                    <div>
-                      <p className="text-white/70 text-sm capitalize mb-1">
-                        {key.replace(/([A-Z])/g, ' $1').trim()}
-                      </p>
-                      <p className="text-white">
-                        {Array.isArray(value) ? value.join(', ') : value}
-                      </p>
+                {Object.entries(regionalData.typicalInvestigationNeeds)
+                  .filter(([key]) => key !== 'estimatedCost')
+                  .map(([key, value]) => (
+                    <div key={key} className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
+                      <div>
+                        <p className="text-white/70 text-sm capitalize mb-1">
+                          {key.replace(/([A-Z])/g, ' $1').trim()}
+                        </p>
+                        <p className="text-white">
+                          {Array.isArray(value) ? value.join(', ') : value}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
               </div>
             </div>
 
