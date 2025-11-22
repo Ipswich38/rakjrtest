@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { MapPin, Search, AlertTriangle, Info, Phone, Mail, Loader2 } from 'lucide-react';
+import { MapPin, Search, AlertTriangle, Info, Phone, Mail, Loader2, Facebook, MessageCircle } from 'lucide-react';
 import { Button } from './ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 import { toast } from 'sonner@2.0.3';
@@ -27,6 +27,7 @@ interface RegionalData {
   criticalNote?: string;
   typicalInvestigationNeeds: {
     minimumBoringDepth: string;
+    estimatedCost?: string;
     [key: string]: any;
   };
 }
@@ -264,7 +265,7 @@ Thank you.
                           <h5 className={`text-lg tracking-tight capitalize ${colors.text}`}>
                             {hazardType}
                           </h5>
-                          <span className={`px-3 py-1 rounded-full text-xs uppercase tracking-wider ${colors.badge}`}>
+                          <span className={`px-3 py-1 rounded-lg text-xs uppercase tracking-wider ${colors.badge}`}>
                             {hazardData.level}
                           </span>
                         </div>
@@ -353,6 +354,69 @@ Thank you.
                   <h5 className="text-lg tracking-tight">{WHY_TESTING_MANDATORY.financialReason.title}</h5>
                   <p className="text-white/80 text-sm">{WHY_TESTING_MANDATORY.financialReason.comparison.soilTesting} vs {WHY_TESTING_MANDATORY.financialReason.comparison.buildingLoss} if building fails</p>
                 </div>
+              </div>
+            </div>
+
+            {/* Cost Estimate Section */}
+            <div className="bg-white rounded-3xl p-8 border-2 border-gray-200">
+              <h4 className="text-2xl text-gray-900 mb-6 tracking-tight">Estimated Cost</h4>
+              <div className="bg-gray-50 rounded-2xl p-6 text-center mb-6">
+                <h5 className="text-xl text-gray-900 mb-2">To Be Determined</h5>
+                <p className="text-sm text-gray-600 mb-4">
+                  Cost depends on project size, location, complexity, and specific testing requirements.
+                  Contact RAK-JR for an accurate quote.
+                </p>
+                <div className="text-xs text-gray-500 bg-yellow-50 border border-yellow-200 rounded-lg p-3">
+                  <div className="flex items-start gap-2">
+                    <AlertTriangle size={14} className="text-yellow-600 flex-shrink-0 mt-0.5" />
+                    <div className="text-left">
+                      <p className="font-medium text-yellow-900 mb-1">Cost Estimates Disclaimer</p>
+                      <p className="text-yellow-800">
+                        Historical data from online sources suggests many underestimate the true value of professional soil testing.
+                        Actual costs vary significantly based on site conditions, project requirements, and local factors.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <h5 className="text-lg text-gray-900 mb-4 text-center">Contact RAK-JR for Accurate Quote</h5>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                <Button
+                  onClick={handleContactRequest}
+                  size="sm"
+                  className="bg-[#028118] hover:bg-[#10c202] text-white rounded-xl"
+                >
+                  <Mail size={16} className="mr-2" />
+                  Email
+                </Button>
+                <Button
+                  onClick={() => window.location.href = 'tel:+639214039264'}
+                  size="sm"
+                  variant="outline"
+                  className="border-gray-300 text-gray-700 hover:bg-gray-50 rounded-xl"
+                >
+                  <Phone size={16} className="mr-2" />
+                  Call
+                </Button>
+                <Button
+                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                  size="sm"
+                  variant="outline"
+                  className="border-gray-300 text-gray-700 hover:bg-gray-50 rounded-xl"
+                >
+                  <MessageCircle size={16} className="mr-2" />
+                  Form
+                </Button>
+                <Button
+                  onClick={() => window.open('https://facebook.com/rakjrtechnicaltestingservices', '_blank')}
+                  size="sm"
+                  variant="outline"
+                  className="border-gray-300 text-gray-700 hover:bg-gray-50 rounded-xl"
+                >
+                  <Facebook size={16} className="mr-2" />
+                  Facebook
+                </Button>
               </div>
             </div>
 
